@@ -26,7 +26,7 @@ async function getUsers(){
     redirect: 'follow'
   };
 
-  const res = await fetch("http://localhost:3000/api/v1/users", requestOptions)
+  const res = await fetch("/api/v1/users", requestOptions)
     if(res.status==200){
       const data = await res.text();
       localStorage.setItem('userArray', data)

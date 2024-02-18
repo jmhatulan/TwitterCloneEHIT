@@ -1,7 +1,7 @@
 /* FOLLOW-RELATED FUNCTIONS */
 async function getFollowedUsers() {
   const currUser = localStorage.getItem('username');
-  const endpoint = `http://localhost:3000/api/v1/users/${currUser}/following`
+  const endpoint = `/api/v1/users/${currUser}/following`
 
   const myHeaders = new Headers();
   myHeaders.append('Authorization', `Bearer ${token}`);
@@ -112,7 +112,7 @@ function updateFollowedUsers(userId, followStatus) {
 async function followUser() {
     const currUser = localStorage.getItem('username');
     const userToFollow = document.getElementById('search-user-1').value;
-    const endpoint = `http://localhost:3000/api/v1/users/${currUser}/following/${userToFollow}`;
+    const endpoint = `/api/v1/users/${currUser}/following/${userToFollow}`;
   
     let myHeaders = new Headers()
     myHeaders.append('Authorization', `Bearer ${token}`);
@@ -141,7 +141,7 @@ async function followUser() {
 async function click_followUser(user){
     const currUser = localStorage.getItem('username');
     const userToFollow = user;
-    const endpoint = `http://localhost:3000/api/v1/users/${currUser}/following/${userToFollow}`;
+    const endpoint = `/api/v1/users/${currUser}/following/${userToFollow}`;
 
     let myHeaders = new Headers()
     myHeaders.append('Authorization', `Bearer ${token}`);
@@ -166,7 +166,7 @@ async function click_followUser(user){
 async function click_unfollowUser(user){
     const currUser = localStorage.getItem('username');
     const userToUnfollow = user;
-    const endpoint = `http://localhost:3000/api/v1/users/${currUser}/following/${userToUnfollow}`;
+    const endpoint = `/api/v1/users/${currUser}/following/${userToUnfollow}`;
 
     let myHeaders = new Headers()
     myHeaders.append('Authorization', `Bearer ${token}`);
