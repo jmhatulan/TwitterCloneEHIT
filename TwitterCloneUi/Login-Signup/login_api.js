@@ -26,7 +26,7 @@ async function login(){
     redirect: 'follow'
     };
 
-    const res = await fetch("http://localhost:3000/api/v1/auth/login", requestOptions)
+    const res = await fetch("http:///api/v1/auth/login", requestOptions)
     if(res.status==200){
         const data = await res.text();
         document.cookie = "loginToken=" + data + ";path=/";
